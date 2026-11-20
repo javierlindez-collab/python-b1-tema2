@@ -51,24 +51,50 @@ Exemple:
 
 
 def sum_even_numbers_in_list_while(list_numbers):
-    # Write here your code
-    pass
+    """ Javier Líndez
+        20/11/2026
+        Suma los números pares de una lista con while
+    """
+    acum = 0
+    i = 0
+    while i < len(list_numbers):
+        if list_numbers[i] % 2 == 0:
+            acum += list_numbers[i]
+        i += 1
+    return acum
 
 
 def sum_even_numbers_in_list_for(list_numbers):
-    # Write here your code
-    pass
-
+    """ Javier Líndez
+        20/11/2026
+        Suma los números pares de una lista con for
+    """
+    acum = 0
+    for i in range(len(list_numbers)):
+        if list_numbers[i] % 2 == 0:
+            acum += list_numbers[i]
+    return acum
 
 def sum_even_numbers_in_list_do_while(list_numbers):
-    # Write here your code
-    pass
+    """ Javier Líndez
+        20/11/2026
+        Suma los números pares de una lista con do while (simulado)
+    """
+    acum = 0
+    i = 0
+    while True:
+        if list_numbers[i] % 2 == 0:
+            acum += list_numbers[i]
+        i += 1
+        if len(list_numbers) <= i:
+            break
+    return acum
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# shopping_list = [10, 449, 33, 44, 188, 640]
-# print(sum_even_numbers_in_list_while(shopping_list))
-# print(sum_even_numbers_in_list_for(shopping_list))
-# print(sum_even_numbers_in_list_do_while(shopping_list))
+shopping_list = [10, 449, 33, 44, 188, 640]
+print(sum_even_numbers_in_list_while(shopping_list))
+print(sum_even_numbers_in_list_for(shopping_list))
+print(sum_even_numbers_in_list_do_while(shopping_list))
