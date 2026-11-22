@@ -66,13 +66,13 @@ Sortida:
 
 
 def tax_calculation_group_1(value: int):
-    """ Calcula los impuestos de value con un porcentaje de 19% """
+    """ Calcula los impuestos de un valor numérico entero con un porcentaje del 19% """
     tax_percent = 19
     result = (tax_percent * value) / 100
     return result
 
 def tax_calculation_global(value: int):
-    """ Calcula los impuestos de value con un porcentaje de 24% """
+    """ Calcula los impuestos de un valor numérico entero con un porcentaje del 24% """
     tax_percent = 24
     result = (tax_percent * value) / 100
     return result
