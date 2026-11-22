@@ -90,24 +90,37 @@ Exemple:
 
 
 def add_student_by_value(list_students, new_student):
-    # Write here your code
-    pass
+    """ Devuelve la lista de estudiantes añadiendo un nuevo estudiante pero sin modificar la lista original. 
+        Las listas se pasan a las funciones por referencia. Por tanto para no modificar la lista original
+        creamos una copia temporal de la lista de estudiantes, añadimos el nuevo estudiante a la copia y
+        devolvemos la copia.
+    """
+    list_students_temp = []                 # Creamos una copia temporal de la lista de estudiantes vacía
+    list_students_temp = list_students[0:]  # Y le añadimos los estudiantes de la lista de estudiantes
+    list_students_temp.append(new_student)  # Y a la copia temporal le añadimos el nuevo estudiante
+    return list_students_temp               # Devolvemos la lista temporal
 
 
 def add_student_by_reference(list_students, new_student):
-    # Write here your code
-    pass
+    """ Añade un nuevo estudiante a la lista de estudiantes por referencia.
+        Solo hay que añadir el estudiante a la lista
+    """
+    list_students.append(new_student)
+    return list_students
 
 
 def main(list_students, new_student_by_value, new_student_by_reference):
-    # Write here your code
-    pass
-
+    print("Original student list ", list_students)
+    print("Student list by value ", add_student_by_value(list_students, new_student_by_value))
+    print("Student list by reference ", add_student_by_reference(list_students, new_student_by_reference))
+    print("Original student list ", list_students)
+    return list_students
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# list_students = ["Alice", "Bob", "Juan"]
-# new_student_by_value = "Maria"
-# new_student_by_reference = "Sofia"
+list_students = ["Alice", "Bob", "Juan"]
+new_student_by_value = "Maria"
+new_student_by_reference = "Sofia"
 
-# main(list_students, new_student_by_value, new_student_by_reference)
+main(list_students, new_student_by_value, new_student_by_reference)
+
