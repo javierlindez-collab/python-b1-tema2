@@ -66,13 +66,16 @@ Sortida:
 
 
 def tax_calculation_group_1(value: int):
-    # Write here your code
-    pass
-
+    """ Calcula los impuestos de value con un porcentaje de 19% """
+    tax_percent = 19
+    result = (tax_percent * value) / 100
+    return result
 
 def tax_calculation_global(value: int):
-    # Write here your code
-    pass
+    """ Calcula los impuestos de value con un porcentaje de 24% """
+    tax_percent = 24
+    result = (tax_percent * value) / 100
+    return result
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
