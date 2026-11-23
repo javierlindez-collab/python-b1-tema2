@@ -60,10 +60,34 @@ L'any a comprovar serà '2000', de manera que:
 """
 
 
-def check_leap_year(
-    year):
-    # Write here your code
-    pass
+def check_leap_year(year):
+    """
+    Comprueba si un año es bisiesto
+
+    Parameters:
+    year (int): Número entero del que queremos saber si es bisiesto o no
+
+    Returns:
+    bool: Booleano que valdrá True si el año es bisiesto o False si no lo es
+    """
+
+    if year % 4 == 0:
+        if year % 100 != 0:
+            # El año es divisible entre 4 y no es un siglo. Es bisiesto
+            leap_year = True
+        else:
+            if year % 400 == 0:
+                # El año es divisible entre 4 y es un siglo
+                # y es divisible entre 400. Es bisiesto
+                leap_year = True
+            else:
+                # El año es divisible entre 4 y es un siglo,
+                # pero no es divisible entre 400. No es bisiesto
+                leap_year = False
+    else:
+        # El año no es divisible entre 4. No es bisiesto
+        leap_year = False
+    return leap_year
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el
