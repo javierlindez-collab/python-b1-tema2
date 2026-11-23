@@ -49,10 +49,21 @@ Exemple:
 """
 
 
-def sum_list_numbers(
-    list_numbers):
-    # Write here your code
-    pass
+def sum_list_numbers(list_numbers):
+    """
+    Esta función retorna la suma de los números de una lista de números
+
+    Parameters:
+    list_numbers (list: float): Lista de números enteros o decimales 
+    que hay que sumar
+
+    Returns:
+    double: La suma de los números de la lista
+    """
+    suma = 0.0
+    for n in range(len(list_numbers)):
+        suma += list_numbers[n]
+    return suma
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y
